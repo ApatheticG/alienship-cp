@@ -17,11 +17,6 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-//Уводим сайдбар вправо
-@media (min-width: 768px) {	
-#secondary {float: left;}
-#primary {float: right;}
-}
 
 
 .entry-title {
