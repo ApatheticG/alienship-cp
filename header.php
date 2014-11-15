@@ -25,38 +25,43 @@ do_action( 'alienship_head' ); ?>
 
 	<?php
 	if ( of_get_option( 'alienship_show_top_navbar', 1 ) )
-		get_template_part( '/templates/parts/menu', 'top' ); ?>
+		//get_template_part( '/templates/parts/menu', 'top' ); ?>
 
 	<div id="page" class="container hfeed site">
 
 		<?php do_action( 'alienship_header_before' ); ?>
 		<header id="masthead" class="site-header" role="banner">
+  			<div class="row cp-widget">
+	          	<div id="header-widget-1" class="col-md-4">
+	              	<?php dynamic_sidebar("header-widget-1"); ?> 
+	          	</div>
+	          	<div id="header-widget-2" class="col-md-4">
+	              	<?php dynamic_sidebar("header-widget-2"); ?> 
+	          	</div>
+	          	<div id="header-widget-3" class="col-md-4">
+	              	<?php dynamic_sidebar("header-widget-3"); ?> 
+	          	</div>
+	      	</div>			
+
 			<?php
-
-			/**
-			 * Display site title and description.
-			 * Hooked in /inc/template-tags.php
-			 */
-			do_action( 'alienship_site_title' );
-			do_action( 'alienship_site_description' );
-
-			// Header image
-			do_action( 'alienship_header_image' );
-
 			// Main menu
 			if ( has_nav_menu('main') ) {
 				get_template_part( '/templates/parts/menu', 'main' );
-			} ?>
+			} 
+
+			if ( function_exists( 'breadcrumb_trail' ) && !is_front_page() )
+					breadcrumb_trail( array(
+						'container'   => 'div',
+						'separator'   => '/',
+						'show_browse' => false
+						)
+					);
+
+			?>
 		</header><!-- #masthead -->
 		<?php do_action( 'alienship_header_after' );
 
 	do_action( 'alienship_content_before' ); ?>
 	<div id="content" class="site-content row">
 
-	<?php if ( function_exists( 'breadcrumb_trail' ) && !is_front_page() )
-		breadcrumb_trail( array(
-			'container'   => 'div',
-			'separator'   => '/',
-			'show_browse' => false
-			)
-		);
+	<?php 

@@ -7,6 +7,7 @@
  */
 
 get_header(); ?>
+<?php get_sidebar(); ?>
 
 	<div id="primary" class="<?php echo apply_filters( 'alienship_primary_container_class', 'content-area col-sm-8' ); ?>">
 
@@ -40,6 +41,4 @@ get_header(); ?>
 		<?php do_action( 'alienship_main_after' ); ?>
 
 	</div><!-- #primary -->
-<?php
-get_sidebar();
-get_footer(); ?>
+<?php get_footer(); ?>

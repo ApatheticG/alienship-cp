@@ -305,3 +305,7 @@ function alienship_delete_transients() {
 add_action( 'save_post', 'alienship_delete_transients' );
 add_action( 'wp_trash_post', 'alienship_delete_transients' );
 add_action( 'delete_post', 'alienship_delete_transients' );
+
+
+
+include_once('cp-includes/top-widgets.php');
