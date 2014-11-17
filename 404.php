@@ -6,7 +6,9 @@
  * @since Alien Ship 0.1
  */
 
-get_header(); ?>
+get_header(); 
+get_sidebar();
+?>
 	<div id="primary" class="<?php echo apply_filters( 'alienship_primary_container_class', 'content-area col-sm-8' ); ?>">
 
 		<?php do_action( 'alienship_main_before' ); ?>
@@ -47,5 +49,4 @@ get_header(); ?>
 
 	</div><!-- #primary -->
 <?php
-get_sidebar();
 get_footer(); ?>

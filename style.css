@@ -4,7 +4,7 @@ Theme URI: http://casepress.org
 Author: John Parris and CasePress Studio
 Author URI: http://www.johnparris.com/alienship/
 Description: Alien Ship is a responsive starter theme for WordPress.
-Version: 20141010
+Version: 20141115
 License: GNU General Public License
 License URI: license.txt
 GitHub Theme URI:	https://github.com/casepress-studio/alienship-cp
@@ -17,11 +17,6 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-//Уводим сайдбар вправо
-@media (min-width: 768px) {	
-#secondary {float: left;}
-#primary {float: right;}
-}
 
 
 .entry-title {
