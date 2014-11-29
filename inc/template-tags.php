@@ -736,7 +736,13 @@ function alienship_do_archive_page_title() { ?>
 
 			} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
 				_e( 'Chats', 'alienship' );
-
+            
+            } elseif (is_post_type_archive()) {
+				post_type_archive_title('', true);
+            
+            } elseif ( is_tax() ) {
+				single_term_title();
+ 
 			} else {
 				_e( 'Archives', 'alienship' );
 
